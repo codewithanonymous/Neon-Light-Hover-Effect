@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(17, 17, 17);
+}
+
+.glow{
+    font-weight:lighter;
+    font-size:108px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-family: 'Shadows Into Light' ;
+    cursor: pointer;
+}
+
+.glow:hover{
+    transition: .5s;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from{
+        text-shadow:
+        0 0 5px white , 0 0 10px white , 0 0 20px white ,
+        0 0 7px #1abc9c , 0 0 12px #1abc9c , 0 0 15px #1abc9c ,
+        0 0 60px #16a085, 0 0 80px #16a085, 0 0 90px #16a085,
+        0 0 110px #218c74, 0 0 160px #218c74;
+    }
+
+    to{
+        text-shadow: 0 0 5px white  , 0 0 10px white   , 0 0 15px white ,
+        0 0 7px #1abc9c , 0 0 12px #1abc9c , 0 0 15px #1abc9c ,
+        0 0 30px #16a085, 0 0 45px #16a085, 0 0 50px #16a085,
+        0 0 60px #218c74, 0 0 85px #218c74;
+    }
+}
